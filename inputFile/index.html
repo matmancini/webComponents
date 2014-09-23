@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Web Components - Input File</title>
+	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+	<style>
+		input {
+			margin-bottom: 10px;
+		}
+	</style>
+
+	<template id="file-button-template">
+		<style>
+			img {
+				padding: 6px;
+				border: 1px solid grey;
+				border-radius: 4px;
+				box-shadow: 1px 1px 4px grey;
+				background-color: lightgrey;
+				width: 30px;
+				cursor: pointer;
+			}
+			img:hover {
+				background-color: whitesmoke;
+			}
+		</style>
+		<img src="img/icon.svg" alt="Input alt text (from template)">
+	</template>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Web Components - Input File</h1>
+		<form>
+			<input type="file">
+			<input type="file">
+			<input type="file">
+			<input type="file">
+			<input type="file">
+		</form>
+	</div>
+
+	<script>
+		if (!Element.prototype.createShadowRoot && Element.prototype.webkitCreateShadowRoot) {
+		  Element.prototype.createShadowRoot = Element.prototype.webkitCreateShadowRoot;
+		}
+
+		var buttons = document.querySelectorAll('input[type="file"]');
+		var template = document.getElementById('file-button-template');
+
+		for (var x = 0; x < buttons.length; x++) {
+			var shadowRoot = buttons[x].createShadowRoot();
+			var clone = document.importNode(template.content, true);
+			shadowRoot.appendChild(clone);
+		}
+
+	</script>
+
+</body>
+</html>
