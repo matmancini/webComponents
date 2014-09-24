@@ -1,0 +1,21 @@
+{
+  "name": "webComponents",
+  "version": "1.0",
+  "homepage": "https://github.com/matmancini/webComponents",
+  "authors": [
+    "Matias Mancini <info@matiasmancini.com.ar>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "normalize-css": "~3.0.1",
+    "jquery": "~2.1.1"
+  }
+}

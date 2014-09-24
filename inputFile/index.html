@@ -2,13 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Web Components - Input File</title>
-	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
-	<style>
-		input {
-			margin-bottom: 10px;
-		}
-	</style>
-
+	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
 	<template id="file-button-template">
 		<style>
 			img {
@@ -29,16 +23,14 @@
 </head>
 <body>
 
-	<div class="container">
-		<h1>Web Components - Input File</h1>
-		<form>
-			<input type="file">
-			<input type="file">
-			<input type="file">
-			<input type="file">
-			<input type="file">
-		</form>
-	</div>
+	<h1>Web Components - Input File</h1>
+	<form>
+		<input type="file">
+		<input type="file">
+		<input type="file">
+		<input type="file">
+		<input type="file">
+	</form>
 
 	<script>
 		if (!Element.prototype.createShadowRoot && Element.prototype.webkitCreateShadowRoot) {
